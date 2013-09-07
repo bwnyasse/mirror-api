@@ -5,10 +5,16 @@
     <title>Glass</title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,500">
     <link rel="stylesheet" type="text/css" href="glass.css">
+    
+    <link rel="icon" type="image/png" href="images/google_glass_48.png"> 
+    <link rel="shortcut icon" type="image/x-icon" href="images/google_glass_48.png">
+
     <script src="/_ah/channel/jsapi"></script>
     <script src="glass.js"></script>
   </head>
   <body>
+    <div id="bg-img"></div>
+    
     <div id="signin">
       <button class="g-signin"
         data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email"
@@ -22,9 +28,11 @@
       <button id="signout_button">Sign-out and disconnect</button>
     </div>
     <div id="glass" style="display: none;"></div>
+
     <div id="footer">
-      Mirror API Emulator created by <a href="https://plus.google.com/112336147904981294875" rel="author" target="_blank">Gerwin Sturm</a>. If you are not hosting this as your own App Engine project, be aware that things will break randomly and your data will disappear while I test stuff. Please <a href="https://github.com/Scarygami/mirror-api" target="_blank">get the source and host your own version</a>.
+      Mirror API Emulator initially created by <a href="https://plus.google.com/112336147904981294875" rel="author" target="_blank">Gerwin Sturm</a> and modified by <a href="https://twitter.com/bwnyasse" rel="author" target="_blank">Boris-W. Nyasse</a>.
     </div>
+
     <script type="text/javascript">
       (function(global) {
         global.discoveryUrl = "{{ discovery_url }}";
